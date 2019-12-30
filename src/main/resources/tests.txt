@@ -1,0 +1,82 @@
+10731 [Thread-0] INFO  ru.pflb.homework.utils.CustomLogger - Клик по элементу 'Войти'
+10993 [Thread-3] INFO  ru.pflb.homework.utils.CustomLogger - Клик по элементу 'Войти'
+11467 [Thread-2] INFO  ru.pflb.homework.utils.CustomLogger - Клик по элементу 'Войти'
+11871 [Thread-1] INFO  ru.pflb.homework.utils.CustomLogger - Клик по элементу 'Войти'
+510  [Thread-0] ERROR r.s.a.seven.java.utils.CustomLogger - ba7683ed-9e23-48e8-b0db-dc0840a99943
+java.lang.IllegalStateException: The path to the driver executable must be set by the webdriver.chrome.driver system property; for more information, see https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver. The latest version can be downloaded from http://chromedriver.storage.googleapis.com/index.html
+	at com.google.common.base.Preconditions.checkState(Preconditions.java:847)
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:134)
+	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
+	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
+	at ru.safronov.autotest.seven.java.config.DriverManager.createWD(DriverManager.java:51)
+	at ru.safronov.autotest.seven.java.builder.ProcessingThread.run(ProcessingThread.java:21)
+5318 [Thread-0] ERROR r.s.a.s.j.utils.CustomClassLoader - Класс target\classes\ru\safronov\autotest\seven\java\pageChrome\LoginPage не найден
+java.lang.ClassNotFoundException: null
+	at ru.safronov.autotest.seven.java.utils.CustomClassLoader.findClass(CustomClassLoader.java:22)
+	at ru.safronov.autotest.seven.java.builder.Builder.buildPage(Builder.java:117)
+	at stepdefinitions.MyStepdefs.getPage(MyStepdefs.java:41)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at cucumber.runtime.Utils$1.call(Utils.java:26)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:20)
+	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:50)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:50)
+	at cucumber.runner.TestStep.executeStep(TestStep.java:55)
+	at cucumber.runner.TestStep.run(TestStep.java:42)
+	at cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:53)
+	at cucumber.runner.TestCase.run(TestCase.java:47)
+	at cucumber.runner.Runner.runPickle(Runner.java:44)
+	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:56)
+	at ru.safronov.autotest.seven.java.builder.ProcessingThread.run(ProcessingThread.java:29)
+5255 [Thread-0] ERROR r.s.a.s.j.utils.CustomClassLoader - Класс target\classes\ru\safronov\autotest\seven\java\pageChrome\LoginPage не найден
+java.lang.ClassNotFoundException: null
+	at ru.safronov.autotest.seven.java.utils.CustomClassLoader.findClass(CustomClassLoader.java:22)
+	at ru.safronov.autotest.seven.java.builder.Builder.buildPage(Builder.java:117)
+	at stepdefinitions.MyStepdefs.getPage(MyStepdefs.java:41)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at cucumber.runtime.Utils$1.call(Utils.java:26)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:20)
+	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:50)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:50)
+	at cucumber.runner.TestStep.executeStep(TestStep.java:55)
+	at cucumber.runner.TestStep.run(TestStep.java:42)
+	at cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:53)
+	at cucumber.runner.TestCase.run(TestCase.java:47)
+	at cucumber.runner.Runner.runPickle(Runner.java:44)
+	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:56)
+	at ru.safronov.autotest.seven.java.builder.ProcessingThread.run(ProcessingThread.java:29)
+5515 [Thread-0] ERROR r.s.a.s.j.utils.CustomClassLoader - Класс target\classes\ru\safronov\autotest\seven\java\page\Chrome\LoginPage не найден
+java.lang.ClassNotFoundException: null
+	at ru.safronov.autotest.seven.java.utils.CustomClassLoader.findClass(CustomClassLoader.java:22)
+	at ru.safronov.autotest.seven.java.builder.Builder.buildPage(Builder.java:117)
+	at stepdefinitions.MyStepdefs.getPage(MyStepdefs.java:41)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at cucumber.runtime.Utils$1.call(Utils.java:26)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:20)
+	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:50)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:50)
+	at cucumber.runner.TestStep.executeStep(TestStep.java:55)
+	at cucumber.runner.TestStep.run(TestStep.java:42)
+	at cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:53)
+	at cucumber.runner.TestCase.run(TestCase.java:47)
+	at cucumber.runner.Runner.runPickle(Runner.java:44)
+	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:56)
+	at ru.safronov.autotest.seven.java.builder.ProcessingThread.run(ProcessingThread.java:29)
+5647 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Ввод в поле ''
+5822 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Ввод в поле ''
+5082 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Ввод в поле ''
+5237 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Клик по элементу 'Далее'
+5713 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Ввод в поле ''
+6803 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Клик по элементу 'Далее'

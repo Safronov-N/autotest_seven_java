@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestSuite" thread-count="1" parallel="instances">
+    <test name="tests">
+        <classes>
+            <class name="ru.pflb.homework.Runner"/>
+        </classes>
+    </test>
+</suite>
+
+
+
+
