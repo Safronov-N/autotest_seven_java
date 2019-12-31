@@ -17,17 +17,6 @@ import java.util.Objects;
 import java.util.Properties;
 
 public class Builder {
-    //driver types
-    public static final String CHROME = "Chrome";
-    public static final String FIREFOX = "Firefox";
-    public static final String IE = "IE";
-
-    //page attribute
-    private static final String NAME = "name";
-    private static final String TYPE = "type";
-    private static final String CHROME_PATH = "ChromePath";
-    private static final String FIREFOX_PATH = "FirefoxPath";
-    private static final String IE_PATH = "IEPath";
 
     private static synchronized List<ElementPattern> parsePage(String pageName) {
         List<ElementPattern> elementList = new ArrayList<>();

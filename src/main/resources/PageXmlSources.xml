@@ -1,27 +1,21 @@
 <ModelType>
-    <Drivers>
-        <Driver type="ChromeDriver" filePath="bin\\chromedriver.exe" serviceType = "ChromeDriverService"/>
-<!--        <Driver type="IEDriver" filePath="bin\\geckodriver.exe" serviceType = "GeckoDriverService"/>-->
-    </Drivers>
-    <Pages>
-        <Page name="LoginPage">
-            <Element name="emailXpath" bind="Логин" type="TextField" chromePath="//input[@type='email']"/>
-            <Element name="passwordXpath" bind="Пароль" type="TextField" chromePath="//input[@type='password']"/>
-            <Element name="nextBtnXpath" bind="Продолжить" type="Button" chromePath="//*[@id='identifierNext' or @id='passwordNext']"/>
-        </Page>
-
-
-
-<!--        <Page name = "GMailAbout">-->
-<!--            <Element name = "signIn" type="Button" chromePath="//a[@data-g-label='Sign in']"-->
-<!--                     firefoxPath="//a[@data-g-label='Sign in']"/>-->
-<!--            <Element name="createAccount" type="Button" chromePath="//div[@class='maia-util']//a[@data-g-label='Create an account button']"-->
-<!--                     firefoxPath="//div[@class='maia-util']//a[@data-g-label='Create an account button']"/>-->
-
-<!--        </Page>-->
-    </Pages>
-
-    <Triggers>
-        <Trigger name="transferPageNonClient" event="transferPageClientType=//div[@ng-click='close()']"/>
-    </Triggers>
+  <Rules>
+    <Rule ref="next" name="next" bind="продолжить" type="button"/>
+  </Rules>
+  <Includes>
+    <Include path="ExternalPages.xml"/>
+  </Includes>
+  <Drivers>
+    <Driver type="ChromeDriver" filePath="bin\\chromedriver.exe" serviceType="ChromeDriverService"/>
+    <!--        <Driver type="IEDriver" filePath="bin\\geckodriver.exe" serviceType = "GeckoDriverService"/>-->
+  </Drivers>
+  <Pages>
+    <Page name="LoginPage">
+      <Element name="email" bind="Логин" type="TextField" chromePath="//input[@type='email']"/>
+      <Element name="password" bind="Пароль" type="TextField"
+        chromePath="//input[@type='password']"/>
+      <Element ref="next"
+        chromePath="//*[@id='identifierNext' or @id='passwordNext']"/>
+    </Page>
+  </Pages>
 </ModelType>

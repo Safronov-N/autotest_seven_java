@@ -1,6 +1,6 @@
 package ru.safronov.autotest.seven.java.exceptions;
 
-public abstract class MyException extends IllegalStateException {
+public abstract class MyException extends RuntimeException {
     MyException(){
 
     }

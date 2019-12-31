@@ -3,7 +3,7 @@
 <suite name="TestSuite" thread-count="1" parallel="instances">
     <test name="tests">
         <classes>
-            <class name="ru.pflb.homework.Runner"/>
+            <class name="Runner"/>
         </classes>
     </test>
 </suite>
