@@ -1,12 +1,10 @@
 package ru.safronov.autotest.seven.java.elementModels;
 
 import org.openqa.selenium.WebElement;
-import ru.safronov.autotest.seven.java.elementModels.AbstractElement;
 import ru.safronov.autotest.seven.java.interfaces.IElementCollection;
 import ru.safronov.autotest.seven.java.utils.CustomLogger;
 import ru.safronov.autotest.seven.java.utils.ElementFuture;
 import ru.safronov.autotest.seven.java.utils.ElementFutureResolved;
-import ru.safronov.autotest.seven.java.utils.MenuItem;
 
 import java.util.ArrayList;
 import java.util.Collection;

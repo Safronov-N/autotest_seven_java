@@ -10,7 +10,7 @@ public class Definition {
         content=new ConcurrentHashMap<>();
     }
 
-    public Object getAttribute(String bind){
-        return content.get(bind);
+    public <T> T getAttribute(String bind){
+        return (T) content.get(bind);
     }
 }

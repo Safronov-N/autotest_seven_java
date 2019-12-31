@@ -9,7 +9,7 @@
       <Element name="email" bind="Логин" type="TextField" chromePath="//input[@type='email']"/>
       <Element name="password" bind="Пароль" type="TextField"
         chromePath="//input[@type='password']"/>
-      <Element name="next" auto="true"
+      <Element ref="next"
         chromePath="//*[@id='identifierNext' or @id='passwordNext']"/>
     </Page>
   </Pages>

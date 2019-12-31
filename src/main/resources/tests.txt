@@ -80,3 +80,212 @@ java.lang.ClassNotFoundException: null
 5237 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Клик по элементу 'Далее'
 5713 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Ввод в поле ''
 6803 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Клик по элементу 'Далее'
+4816 [Thread-0] ERROR r.s.a.s.j.utils.CustomClassLoader - Класс target\classes\ru\safronov\autotest\seven\java\page\Chrome\LoginPage не найден
+java.lang.ClassNotFoundException: null
+	at ru.safronov.autotest.seven.java.utils.CustomClassLoader.findClass(CustomClassLoader.java:22)
+	at ru.safronov.autotest.seven.java.builder.Builder.buildPage(Builder.java:83)
+	at stepdefinitions.MyStepdefs.getPage(MyStepdefs.java:41)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at cucumber.runtime.Utils$1.call(Utils.java:26)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:20)
+	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:50)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:50)
+	at cucumber.runner.TestStep.executeStep(TestStep.java:55)
+	at cucumber.runner.TestStep.run(TestStep.java:42)
+	at cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:53)
+	at cucumber.runner.TestCase.run(TestCase.java:47)
+	at cucumber.runner.Runner.runPickle(Runner.java:44)
+	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:56)
+	at ru.safronov.autotest.seven.java.builder.ProcessingThread.run(ProcessingThread.java:29)
+5343 [Thread-0] ERROR r.s.a.s.j.utils.CustomClassLoader - Класс target\classes\ru\safronov\autotest\seven\java\page\Chrome\LoginPage не найден
+java.lang.ClassNotFoundException: null
+	at ru.safronov.autotest.seven.java.utils.CustomClassLoader.findClass(CustomClassLoader.java:22)
+	at ru.safronov.autotest.seven.java.builder.Builder.buildPage(Builder.java:84)
+	at stepdefinitions.MyStepdefs.getPage(MyStepdefs.java:41)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at cucumber.runtime.Utils$1.call(Utils.java:26)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:20)
+	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:50)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:50)
+	at cucumber.runner.TestStep.executeStep(TestStep.java:55)
+	at cucumber.runner.TestStep.run(TestStep.java:42)
+	at cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:53)
+	at cucumber.runner.TestCase.run(TestCase.java:47)
+	at cucumber.runner.Runner.runPickle(Runner.java:44)
+	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:56)
+	at ru.safronov.autotest.seven.java.builder.ProcessingThread.run(ProcessingThread.java:29)
+29168 [Thread-0] ERROR r.s.a.s.j.utils.CustomClassLoader - Класс target\classes\ru\safronov\autotest\seven\java\page\Chrome\LoginPage не найден
+java.lang.ClassNotFoundException: null
+	at ru.safronov.autotest.seven.java.utils.CustomClassLoader.findClass(CustomClassLoader.java:22)
+	at ru.safronov.autotest.seven.java.builder.Builder.buildPage(Builder.java:84)
+	at stepdefinitions.MyStepdefs.getPage(MyStepdefs.java:41)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at cucumber.runtime.Utils$1.call(Utils.java:26)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:20)
+	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:50)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:50)
+	at cucumber.runner.TestStep.executeStep(TestStep.java:55)
+	at cucumber.runner.TestStep.run(TestStep.java:42)
+	at cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:53)
+	at cucumber.runner.TestCase.run(TestCase.java:47)
+	at cucumber.runner.Runner.runPickle(Runner.java:44)
+	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:56)
+	at ru.safronov.autotest.seven.java.builder.ProcessingThread.run(ProcessingThread.java:29)
+4935 [Thread-0] ERROR r.s.a.s.j.utils.CustomClassLoader - Класс target\classes\ru\safronov\autotest\seven\java\page\Chrome\LoginPage не найден
+java.lang.ClassNotFoundException: null
+	at ru.safronov.autotest.seven.java.utils.CustomClassLoader.findClass(CustomClassLoader.java:22)
+	at ru.safronov.autotest.seven.java.builder.Builder.buildPage(Builder.java:84)
+	at stepdefinitions.MyStepdefs.getPage(MyStepdefs.java:41)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at cucumber.runtime.Utils$1.call(Utils.java:26)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:20)
+	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:50)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:50)
+	at cucumber.runner.TestStep.executeStep(TestStep.java:55)
+	at cucumber.runner.TestStep.run(TestStep.java:42)
+	at cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:53)
+	at cucumber.runner.TestCase.run(TestCase.java:47)
+	at cucumber.runner.Runner.runPickle(Runner.java:44)
+	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:56)
+	at ru.safronov.autotest.seven.java.builder.ProcessingThread.run(ProcessingThread.java:29)
+4646 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Ввод в поле ''
+4795 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Клик по элементу 'Далее'
+4954 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Ввод в поле ''
+5638 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Клик по элементу 'Далее'
+5782 [Thread-0] ERROR r.s.a.s.j.utils.CustomClassLoader - Класс target\classes\ru\safronov\autotest\seven\java\page\Chrome\LoginPage не найден
+java.lang.ClassNotFoundException: null
+	at ru.safronov.autotest.seven.java.utils.CustomClassLoader.findClass(CustomClassLoader.java:22)
+	at ru.safronov.autotest.seven.java.builder.Builder.buildPage(Builder.java:84)
+	at stepdefinitions.MyStepdefs.getPage(MyStepdefs.java:41)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at cucumber.runtime.Utils$1.call(Utils.java:26)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:20)
+	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:50)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:50)
+	at cucumber.runner.TestStep.executeStep(TestStep.java:55)
+	at cucumber.runner.TestStep.run(TestStep.java:42)
+	at cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:53)
+	at cucumber.runner.TestCase.run(TestCase.java:47)
+	at cucumber.runner.Runner.runPickle(Runner.java:44)
+	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:56)
+	at ru.safronov.autotest.seven.java.builder.ProcessingThread.run(ProcessingThread.java:29)
+4688 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Ввод в поле ''
+4821 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Клик по элементу 'Далее'
+4961 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Ввод в поле ''
+5646 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Клик по элементу 'Далее'
+4257 [Thread-0] ERROR r.s.a.s.j.utils.CustomClassLoader - Класс target\classes\ru\safronov\autotest\seven\java\page\Chrome\DepositPage не найден
+java.lang.ClassNotFoundException: null
+	at ru.safronov.autotest.seven.java.utils.CustomClassLoader.findClass(CustomClassLoader.java:22)
+	at ru.safronov.autotest.seven.java.builder.Builder.buildPage(Builder.java:84)
+	at stepdefinitions.MyStepdefs.getPage(MyStepdefs.java:41)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at cucumber.runtime.Utils$1.call(Utils.java:26)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:20)
+	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:50)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:50)
+	at cucumber.runner.TestStep.executeStep(TestStep.java:55)
+	at cucumber.runner.TestStep.run(TestStep.java:42)
+	at cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:53)
+	at cucumber.runner.TestCase.run(TestCase.java:47)
+	at cucumber.runner.Runner.runPickle(Runner.java:44)
+	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:56)
+	at ru.safronov.autotest.seven.java.builder.ProcessingThread.run(ProcessingThread.java:29)
+4903 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Ввод в поле ''
+5030 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Клик по элементу 'Далее'
+5165 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Ввод в поле ''
+5850 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Клик по элементу 'Далее'
+4956 [Thread-0] ERROR r.s.a.s.j.utils.CustomClassLoader - Класс target\classes\ru\safronov\autotest\seven\java\page\Chrome\DepositPage не найден
+java.lang.ClassNotFoundException: null
+	at ru.safronov.autotest.seven.java.utils.CustomClassLoader.findClass(CustomClassLoader.java:22)
+	at ru.safronov.autotest.seven.java.builder.Builder.buildPage(Builder.java:84)
+	at stepdefinitions.MyStepdefs.getPage(MyStepdefs.java:41)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at cucumber.runtime.Utils$1.call(Utils.java:26)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:20)
+	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:50)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:50)
+	at cucumber.runner.TestStep.executeStep(TestStep.java:55)
+	at cucumber.runner.TestStep.run(TestStep.java:42)
+	at cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:53)
+	at cucumber.runner.TestCase.run(TestCase.java:47)
+	at cucumber.runner.Runner.runPickle(Runner.java:44)
+	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:56)
+	at ru.safronov.autotest.seven.java.builder.ProcessingThread.run(ProcessingThread.java:29)
+5174 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Ввод в поле ''
+5307 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Клик по элементу 'Далее'
+5536 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Ввод в поле ''
+6888 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Клик по элементу 'Далее'
+4896 [Thread-0] ERROR r.s.a.s.j.utils.CustomClassLoader - Класс target\classes\\ru\safronov\autotest\seven\java\page\Chrome\DepositPage не найден
+java.lang.ClassNotFoundException: null
+	at ru.safronov.autotest.seven.java.utils.CustomClassLoader.findClass(CustomClassLoader.java:22)
+	at ru.safronov.autotest.seven.java.builder.Builder.buildPage(Builder.java:84)
+	at stepdefinitions.MyStepdefs.getPage(MyStepdefs.java:41)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at cucumber.runtime.Utils$1.call(Utils.java:26)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:20)
+	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:50)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:50)
+	at cucumber.runner.TestStep.executeStep(TestStep.java:55)
+	at cucumber.runner.TestStep.run(TestStep.java:42)
+	at cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:53)
+	at cucumber.runner.TestCase.run(TestCase.java:47)
+	at cucumber.runner.Runner.runPickle(Runner.java:44)
+	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:56)
+	at ru.safronov.autotest.seven.java.builder.ProcessingThread.run(ProcessingThread.java:29)
+5683 [Thread-0] ERROR r.s.a.s.j.utils.CustomClassLoader - Класс target\classes\\ru\safronov\autotest\seven\java\page\Chrome\DepositPage не найден
+java.lang.ClassNotFoundException: null
+	at ru.safronov.autotest.seven.java.utils.CustomClassLoader.findClass(CustomClassLoader.java:22)
+	at ru.safronov.autotest.seven.java.builder.Builder.buildPage(Builder.java:85)
+	at stepdefinitions.MyStepdefs.getPage(MyStepdefs.java:41)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at cucumber.runtime.Utils$1.call(Utils.java:26)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:20)
+	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:50)
+	at cucumber.runtime.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:50)
+	at cucumber.runner.TestStep.executeStep(TestStep.java:55)
+	at cucumber.runner.TestStep.run(TestStep.java:42)
+	at cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:53)
+	at cucumber.runner.TestCase.run(TestCase.java:47)
+	at cucumber.runner.Runner.runPickle(Runner.java:44)
+	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:56)
+	at ru.safronov.autotest.seven.java.builder.ProcessingThread.run(ProcessingThread.java:29)
+6364 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Ввод в поле ''
+6492 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Клик по элементу 'Далее'
+6739 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Ввод в поле ''
+7605 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Клик по элементу 'Далее'

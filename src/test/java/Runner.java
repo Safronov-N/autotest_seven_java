@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import ru.safronov.autotest.seven.java.references.Parser;
+import ru.safronov.autotest.seven.java.references.Parser.ParserType;
 
 @CucumberOptions(
         features = "src/test/resources/features",
@@ -38,7 +39,7 @@ public class Runner {
 
     @Test
     public void numberedScenario() {
-        Parser.instance.parse("src\\main\\resources\\PageXmlSources.xml");
+        Parser.getInstance(ParserType.STATIC).parse("src\\main\\resources\\PageXmlSources.xml");
         System.setProperty("scenario.data", "{test:ChromeDriver}");
         String scenariosData = System.getProperty("scenario.data");
         List<String> threadData = new ArrayList<>();

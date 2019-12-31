@@ -5,17 +5,18 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+import ru.safronov.autotest.seven.java.exceptions.ConfigException;
 
 public class Namespace {
     private Map<String,Definition> rules;
     private Set<Definition> includes;
     private Set<Definition> drivers;
-    private Set<Definition> pages;
+    private Map<String,Definition> pages;
     private Namespace(){
         rules=new HashMap<>();
         includes=new HashSet<>();
         drivers=new HashSet<>();
-        pages=new HashSet<>();
+        pages=new HashMap<>();
     }
     public static Namespace instance;
     static {
@@ -41,10 +42,24 @@ public class Namespace {
     }
 
     public void addPage(Definition page){
-        pages.add(page);
+        pages.put(String.valueOf(page.getAttribute("name")),page);
     }
 
     public Collection<Definition> getIncludes() {
         return includes;
+    }
+
+    public Definition getPage(String pageName) {
+        Definition page=pages.get(pageName);
+        if (page==null)
+            throw new ConfigException(String.format("Не существует страницы '%s'",pageName));
+        return page;
+    }
+
+    public Definition getDriver(String driverType) {
+        for (Definition definition:drivers)
+            if (driverType.equals(definition.getAttribute("type")))
+                return definition;
+            throw new ConfigException(String.format("Не существует драйвера с типом '%s'",driverType));
     }
 }
