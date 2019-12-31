@@ -41,10 +41,14 @@ public class Builder {
         HashMap<String, Definition> elementList = Namespace.instance.getPage(pageName).getAttribute("Elements");
         String element = "\n\r@Element(\"elementBindHolder\")\n\rpublic typeHolder elementNameHolder(){\n\r return elementFactory(typeHolder.class, By.xpath(\"pathHolder\"));\n\r}\n\r";
         for (Entry<String,Definition> elementPattern : elementList.entrySet()) {
+            Definition definition=elementPattern.getValue();
+            String xpath=definition.getAttribute(String.format("%sPath",
+                driverType.replaceAll("Driver", "").toLowerCase()));
+            if (xpath==null)
+                xpath=definition.getAttribute("defaultXpath");
             stringBuilder.insert(indexOfSelectableElement + 1, element.replaceAll("elementNameHolder",
                 StringUtils.capitalize(elementPattern.getValue().<String>getAttribute("name")))
-                    .replaceAll("pathHolder", elementPattern.getValue().<String>getAttribute(String.format("%sPath",
-                        driverType.replaceAll("Driver", "").toLowerCase())))
+                    .replaceAll("pathHolder", xpath)
                     .replaceAll("typeHolder", StringUtils.capitalize(elementPattern.getValue().<String>getAttribute("type")))
                     .replaceAll("elementBindHolder", StringUtils.capitalize(elementPattern.getKey()))
                     .replaceAll("driverType", driverType));
