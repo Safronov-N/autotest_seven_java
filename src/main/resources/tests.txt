@@ -297,3 +297,7 @@ java.lang.ClassNotFoundException: null
 5735 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Клик по элементу 'Далее'
 5995 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Ввод в поле ''
 7388 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Клик по элементу 'Далее'
+8166 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Ввод в поле ''
+8300 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Клик по элементу 'Далее'
+8432 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Ввод в поле ''
+9214 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Клик по элементу 'Далее'

@@ -1,6 +1,9 @@
-<ModelType>
+<?xml version="1.0" encoding="UTF-8"?>
+<ModelType
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="PageXmlSource.xsd">
   <Rules>
-    <Rule ref="next" name="next" bind="продолжить" type="button"/>
+    <Rule ref="next" name="next" bind="продолжить" type="Button"/>
   </Rules>
   <Includes>
     <Include path="ExternalPages.xml"/>

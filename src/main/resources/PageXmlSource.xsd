@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="test" xmlns:pfx="test">
+  <xs:attribute name="name">
+    <xs:simpleType>
+      <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+  </xs:attribute>
+  <xs:attribute name="chromePath">
+    <xs:simpleType>
+      <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+  </xs:attribute>
+  <xs:attribute name="firefoxPath">
+    <xs:simpleType>
+      <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+  </xs:attribute>
+  <xs:attribute name="iePath">
+    <xs:simpleType>
+      <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+  </xs:attribute>
+  <xs:attribute name="defaultPath">
+    <xs:simpleType>
+      <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+  </xs:attribute>
+  <xs:attribute name="bind">
+    <xs:simpleType>
+      <xs:restriction base="xs:string"/>
+    </xs:simpleType>
+  </xs:attribute>
+  <xs:attribute name="type">
+    <xs:simpleType>
+      <xs:restriction base="xs:NMTOKEN">
+        <xs:enumeration value="Button"/>
+        <xs:enumeration value="TextField"/>
+        <xs:enumeration value="Label"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:attribute>
+  <xs:element name="ModelType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Rules">
+          <xs:complexType>
+            <xs:sequence maxOccurs="unbounded">
+              <xs:element name="Rule">
+                <xs:complexType>
+                  <xs:attribute name="ref" type="xs:string" use="required"/>
+                  <xs:anyAttribute/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Includes">
+          <xs:complexType>
+            <xs:sequence maxOccurs="unbounded">
+              <xs:element name="Include">
+                <xs:complexType>
+                  <xs:attribute name="path" type="xs:string" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Drivers">
+          <xs:complexType>
+            <xs:sequence maxOccurs="unbounded">
+              <xs:element name="Driver">
+                <xs:complexType>
+                  <xs:attribute name="type" type="xs:string" use="required"/>
+                  <xs:attribute name="filePath" type="xs:string" use="required"/>
+                  <xs:attribute name="serviceType" type="xs:string" use="required"/>
+                  <xs:anyAttribute></xs:anyAttribute>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Pages">
+          <xs:complexType>
+            <xs:sequence maxOccurs="unbounded">
+              <xs:element name="Page">
+                <xs:complexType>
+                  <xs:sequence maxOccurs="unbounded">
+                    <xs:element name="Element">
+                      <xs:complexType>
+                        <xs:attribute name="rule" type="xs:string"/>
+                        <xs:attribute name="name" type="xs:string"/>
+                        <xs:attribute name="bind" type="xs:string"/>
+                        <xs:attribute ref="pfx:type"/>
+
+                        <xs:anyAttribute></xs:anyAttribute>
+
+                      </xs:complexType>
+
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="name" type="xs:string" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
