@@ -1,7 +1,11 @@
 package ru.safronov.autotest.seven.java.builder;
 
+import java.util.HashMap;
+import java.util.Map.Entry;
 import org.apache.commons.io.FileUtils;
 import ru.safronov.autotest.seven.java.elementModels.ElementPattern;
+import ru.safronov.autotest.seven.java.references.Definition;
+import ru.safronov.autotest.seven.java.references.Namespace;
 import ru.safronov.autotest.seven.java.utils.CustomClassLoader;
 
 import javax.xml.stream.XMLStreamException;
@@ -15,48 +19,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.Properties;
+import ru.safronov.autotest.seven.java.utils.StringUtils;
 
 public class Builder {
-    //driver types
-    public static final String CHROME = "Chrome";
-    public static final String FIREFOX = "Firefox";
-    public static final String IE = "IE";
-
-    //page attribute
-    private static final String NAME = "name";
-    private static final String TYPE = "type";
-    private static final String CHROME_PATH = "ChromePath";
-    private static final String FIREFOX_PATH = "FirefoxPath";
-    private static final String IE_PATH = "IEPath";
-
-    private static synchronized List<ElementPattern> parsePage(String pageName) {
-        List<ElementPattern> elementList = new ArrayList<>();
-        try (StaxStreamProcessor processor = new StaxStreamProcessor(Files.newInputStream(Paths.get("src\\main\\resources\\PageXmlSources.xml")))) {
-            XMLStreamReader reader = processor.getReader();
-            while (reader.hasNext()) {
-                int event = reader.next();
-                if (event == XMLEvent.START_ELEMENT && pageName.equals(reader.getAttributeValue(null, "name"))) {
-                    int unclosedTags = 1;
-                    while (reader.hasNext() && unclosedTags != 0) {
-                        int elementEvent = reader.next();
-                        //посчет разницы между количеством открывающих и закрывающих тегов
-                        if (reader.getEventType() == XMLEvent.START_ELEMENT) {
-                            unclosedTags += 1;
-                        } else if (reader.getEventType() == XMLEvent.END_ELEMENT) {
-                            unclosedTags -= 1;
-                        }
-                        if (elementEvent == XMLEvent.START_ELEMENT) {
-                            elementList.add(ElementPattern.of(reader));
-                        }
-                    }
-                }
-            }
-        } catch (XMLStreamException | IOException e) {
-            e.printStackTrace();
-        }
-        return elementList;
-    }
-
     public static synchronized Class buildPage(String driverType, String pageName) {
         File file = new File(String.format("./src/main/java/ru/safronov/autotest/seven/java/page/%s", driverType.replaceAll("Driver", "")));
         file.mkdir();
@@ -73,13 +38,19 @@ public class Builder {
         basicPage = basicPage.replaceAll("PageName", pageName);
         int indexOfSelectableElement = basicPage.indexOf('{');
         StringBuilder stringBuilder = new StringBuilder(basicPage);
-        List<ElementPattern> elementList = parsePage(pageName);
+        HashMap<String, Definition> elementList = Namespace.instance.getPage(pageName).getAttribute("Elements");
         String element = "\n\r@Element(\"elementBindHolder\")\n\rpublic typeHolder elementNameHolder(){\n\r return elementFactory(typeHolder.class, By.xpath(\"pathHolder\"));\n\r}\n\r";
-        for (ElementPattern elementPattern : elementList) {
-            stringBuilder.insert(indexOfSelectableElement + 1, element.replaceAll("elementNameHolder", elementPattern.getAttribute("name"))
-                    .replaceAll("pathHolder", elementPattern.getAttribute(String.format("%sPath", driverType.replaceAll("Driver", "").toLowerCase())))
-                    .replaceAll("typeHolder", elementPattern.getAttribute("type"))
-                    .replaceAll("elementBindHolder", elementPattern.getAttribute("bind"))
+        for (Entry<String,Definition> elementPattern : elementList.entrySet()) {
+            Definition definition=elementPattern.getValue();
+            String xpath=definition.getAttribute(String.format("%sPath",
+                driverType.replaceAll("Driver", "").toLowerCase()));
+            if (xpath==null)
+                xpath=definition.getAttribute("defaultXpath");
+            stringBuilder.insert(indexOfSelectableElement + 1, element.replaceAll("elementNameHolder",
+                StringUtils.capitalize(elementPattern.getValue().<String>getAttribute("name")))
+                    .replaceAll("pathHolder", xpath)
+                    .replaceAll("typeHolder", StringUtils.capitalize(elementPattern.getValue().<String>getAttribute("type")))
+                    .replaceAll("elementBindHolder", StringUtils.capitalize(elementPattern.getKey()))
                     .replaceAll("driverType", driverType));
         }
         String pageClassname = String.format("./src/main/java/ru/safronov/autotest/seven/java/page/%s/%s.java", driverType.replaceAll("Driver", ""), pageName);
@@ -92,15 +63,16 @@ public class Builder {
         Properties properties = System.getProperties();
         String sep = properties.getProperty("file.separator");
         String jrePath = properties.getProperty("java.home");
-        String classFileDirectory = String.format("target%sclasses", sep, sep);
+        String classFileDirectory = String.format("target%sclasses%s", sep, sep);
         String format = System.getProperty("os.name").toLowerCase().contains("windows")
                 ? "\"%s\""
                 : "%s";
         String javac = jrePath + sep + "bin" + sep + "javac";
         javac = String.format(format, javac);
-        javac += " -J -Dfile.encoding=windows1251-encoding utf8";
+        javac += " -J-Dfile.encoding=windows1251 -encoding utf8";
         String classPath = System.getProperty("java.class.path").replaceAll("\\s", "\\\\ ");
-        String command = String.format("%s -d %s -soyrcepath src -classpath \"%s\" %s", javac, classFileDirectory, classPath, pageFile.getPath());
+        String command = String.format("%s -d %s -sourcepath src -classpath \"%s\" %s", javac, classFileDirectory, classPath,
+            pageFile.getPath());
         Process process = null;
         try {
             process = Runtime.getRuntime().exec(command);

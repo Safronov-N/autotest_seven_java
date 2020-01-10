@@ -1,0 +1,13 @@
+<ModelType
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="PageXmlSource.xsd">
+  <Pages>
+    <Page name="DepositPage">
+      <Element name="email" bind="Логин" type="TextField" defaultXpath="//input[@type='email']"/>
+      <Element name="password" bind="Пароль" type="TextField"
+        defaultXpath="//input[@type='password']"/>
+      <Element ref="next"
+        defaultXpath="//*[@id='identifierNext' or @id='passwordNext']"/>
+    </Page>
+  </Pages>
+</ModelType>
