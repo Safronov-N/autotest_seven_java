@@ -69,9 +69,25 @@ public abstract class Parser {
                         driver.content.putAll(Namespace.instance.getRule(ref).content);
                     driver.content.put(reader.getAttributeLocalName(i), reader.getAttributeValue(i));
                 }
+                reader.next();
+                reader.next();
+                if (reader.getEventType()==1 && reader.hasName() && reader.getLocalName().equals("Capability")){
+                    HashMap<String,String> capabilities=parseCapabilities();
+                    driver.content.put("capabilities",capabilities);
+                }
                 Namespace.instance.addDriver(driver);
             }
-            reader.next();
+            else
+                reader.next();
+        }
+
+        private HashMap<String, String> parseCapabilities() throws XMLStreamException {
+            HashMap<String,String> result=new HashMap<>();
+            while (reader.getEventType()==1 && reader.hasName() && reader.getLocalName().equals("Capability")) {
+                    result.put(reader.getAttributeValue(null,"name"),reader.getAttributeValue(null,"value"));
+                reader.next();
+            }
+            return result;
         }
 
         private void parseDrivers() throws XMLStreamException {

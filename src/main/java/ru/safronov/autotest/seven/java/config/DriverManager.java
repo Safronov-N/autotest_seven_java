@@ -1,7 +1,11 @@
 package ru.safronov.autotest.seven.java.config;
 
+import java.util.HashMap;
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.service.DriverService;
 import ru.safronov.autotest.seven.java.builder.StaxStreamProcessor;
 import ru.safronov.autotest.seven.java.references.Definition;
@@ -33,6 +37,7 @@ public final class DriverManager {
     public static synchronized WebDriver createWD(String driverType) {
         try {
             Definition definition = Namespace.instance.getDriver(driverType);
+            HashMap <String,String> xmlCaps=definition.getAttribute("capabilities");
             String driverTypeName = definition.getAttribute("type");
             String packageName = definition.getAttribute("package-name");
             String shortDriverType = driverTypeName.substring(0, driverTypeName.indexOf("Driver"));
@@ -45,6 +50,11 @@ public final class DriverManager {
             CustomLogger.debug(String.format("Created driverOptions '%s'", driverOptionsName));//ChromeOptions или FireFoxOptions
             String driverServiceName = "org.openqa.selenium." + packageName.toLowerCase() + "." + definition.getAttribute(
                 "serviceType");
+            if(xmlCaps!=null){
+                for (Map.Entry<String,String> entry:xmlCaps.entrySet()){
+                    CustomReflection.invokeOr(driverOptions,"setCapability",null,entry.getKey(),entry.getValue());
+                }
+            }
             Class<?> driverServiceClass = Class.forName(driverServiceName);
             Class driverBuilderClass = CustomReflection.getClazz(driverServiceClass, "Builder");
             Object driverBuilder = CustomReflection.createNewInstanceOr(driverBuilderClass, null);

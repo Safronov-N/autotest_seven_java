@@ -301,3 +301,20 @@ java.lang.ClassNotFoundException: null
 8300 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Клик по элементу 'Далее'
 8432 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Ввод в поле ''
 9214 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Клик по элементу 'Далее'
+236  [Thread-0] ERROR r.s.a.seven.java.utils.CustomLogger - 40073f8d-9747-412f-b7ed-872490ce62ad
+ru.safronov.autotest.seven.java.exceptions.ConfigException: Не существует драйвера с типом 'ChromeDriver'
+	at ru.safronov.autotest.seven.java.references.Namespace.getDriver(Namespace.java:63)
+	at ru.safronov.autotest.seven.java.config.DriverManager.createWD(DriverManager.java:35)
+	at ru.safronov.autotest.seven.java.builder.ProcessingThread.run(ProcessingThread.java:21)
+5874 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Ввод в поле ''
+6039 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Клик по элементу 'Далее'
+6340 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Ввод в поле ''
+7233 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Клик по элементу 'Далее'
+7528 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Ввод в поле ''
+7751 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Клик по элементу 'Далее'
+7910 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Ввод в поле ''
+8757 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Клик по элементу 'Далее'
+6915 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Ввод в поле ''
+7051 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Клик по элементу 'Далее'
+7470 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Ввод в поле ''
+8514 [Thread-0] INFO  r.s.a.seven.java.utils.CustomLogger - Клик по элементу 'Далее'
